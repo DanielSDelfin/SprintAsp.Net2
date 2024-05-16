@@ -28,5 +28,24 @@ namespace Sprint2.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public ActionResult TendenciasGastos()
+        {
+            // Aqui você pode escrever a lógica para carregar e exibir os dados de tendências de gastos
+            return View();
+        }
+
+        // GET: DesempenhoFinanceiro
+        public ActionResult DesempenhoFinanceiro()
+        {
+            // Aqui você pode escrever a lógica para carregar e exibir os dados de desempenho financeiro
+            return View();
+        }
+
+        // GET: ComportamentoNegocios
+        public ActionResult ComportamentoNegocios()
+        {
+            // Aqui você pode escrever a lógica para carregar e exibir os dados de comportamento de negócios
+            return View();
+        }
     }
 }

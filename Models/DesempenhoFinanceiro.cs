@@ -2,15 +2,15 @@
 
 namespace Sprint2.Models
 {
-    public class TendenciasGastos
+    public class DesempenhoFinanceiro
     {
         [Key]
         public long Id { get; set; }
         [Required]
-        public long Ano { get; set; }
+        public double Receita { get; set; }
         [Required]
-        public double GastoMarketing { get; set; }
+        public double Lucro { get; set; }
         [Required]
-        public double GastoAutomacao { get; set; }
+        public double Crescimento { get; set; }
     }
 }
