@@ -8,6 +8,7 @@ namespace Sprint2.Persistence
         public DbSet<ComportamentoNegocios> ComportamentoNegocios { get; set; }
         public DbSet<TendenciasGastos> TendenciasGastos { get; set; }
         public DbSet<DesempenhoFinanceiro> DesempenhoFinanceiro { get; set; }
+
         public OracleDbContext(DbContextOptions<OracleDbContext> options) : base(options)
         {
         }
