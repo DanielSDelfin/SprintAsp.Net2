@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Sprint2.Persistence;
+
 namespace Sprint2
 {
     public class Program
@@ -5,7 +8,12 @@ namespace Sprint2
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            
+            // Add DbContext Oracle on the project
+            builder.Services.AddDbContext<OracleDbContext>(options =>
+            {
+                options.UseOracle(builder.Configuration.GetConnectionString("OracleFiap"));
+            });
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
