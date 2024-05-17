@@ -22,6 +22,10 @@ namespace Sprint2.Controllers
         {
             return View();
         }
+        public IActionResult RMs()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -37,15 +41,22 @@ namespace Sprint2.Controllers
         // GET: DesempenhoFinanceiro
         public ActionResult DesempenhoFinanceiro()
         {
-            // Aqui você pode escrever a lógica para carregar e exibir os dados de desempenho financeiro
+
             return View();
         }
 
         // GET: ComportamentoNegocios
         public ActionResult ComportamentoNegocios()
         {
-            // Aqui você pode escrever a lógica para carregar e exibir os dados de comportamento de negócios
-            return View();
+            var Cn = new ComportamentoNegocios
+            {
+                Id = 1,
+                InteracoesPlataforma = 100,
+                FrequenciaUso = 12,
+                Feedback = "Excelente",
+                UsoRecursosEspecificos = "Relatórios e Análises"
+            };
+            return View(Cn);
         }
     }
 }
